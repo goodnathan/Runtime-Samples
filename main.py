@@ -6,7 +6,7 @@ if __name__ == "__main__":
         client = smartsheet.Smartsheet(access_token=config.token)
 
         # The ID of the sheet you want to update
-        sheet_id = 113291573546884  # Replace with your sheet ID
+        sheet_id = SHEET_ID  # Replace with your sheet ID
 
         # Retrieve the sheet to get column information
         sheet = client.Sheets.get_sheet(sheet_id)
