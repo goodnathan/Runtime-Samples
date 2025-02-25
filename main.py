@@ -8,7 +8,9 @@ if __name__ == "__main__":
 
         # The ID of the sheet you want to update
         sheet_id = os.environ.get("SHEET_ID")  # Replace with your sheet ID
-        print(f"SHEET_ID: {sheet_id}")
+        for data in os.environ:
+            # Print the name of the environment variable.
+            print(data)
         # Retrieve the sheet to get column information
         sheet = client.Sheets.get_sheet(sheet_id)
 
