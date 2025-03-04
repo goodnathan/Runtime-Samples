@@ -6,7 +6,6 @@ if __name__ == "__main__":
     def runScript():
         dotenv.load_dotenv()
         client = smartsheet.Smartsheet(access_token=os.getenv("TOKEN"))
-        print(os.getenv("TOKEN"))
 
         # The ID of the sheet you want to update
         sheet_id = os.getenv("SHEET_ID")  # Replace with your sheet ID
