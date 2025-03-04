@@ -1,10 +1,11 @@
 import smartsheet
-import config
 import os
+import dotenv
 
 if __name__ == "__main__":
     def runScript():
-        client = smartsheet.Smartsheet(access_token=config.token)
+        dotenv.load_dotenv()
+        client = smartsheet.Smartsheet(access_token=os.getenv("TOKEN"))
 
         # The ID of the sheet you want to update
         sheet_id = os.environ.get("SHEET_ID")  # Replace with your sheet ID
