@@ -8,10 +8,8 @@ if __name__ == "__main__":
         client = smartsheet.Smartsheet(access_token=os.getenv("TOKEN"))
 
         # The ID of the sheet you want to update
-        sheet_id = os.environ.get("SHEET_ID")  # Replace with your sheet ID
-        for data in os.environ:
-            # Print the name of the environment variable.
-            print(data)
+        sheet_id = os.getenv("SHEET_ID")  # Replace with your sheet ID
+        
         # Retrieve the sheet to get column information
         sheet = client.Sheets.get_sheet(sheet_id)
 
