@@ -36,4 +36,6 @@ if __name__ == "__main__":
         # Print response
         print(f"Row added with ID: {response.result[0].id}")
 
+        return response
+
 runScript()
